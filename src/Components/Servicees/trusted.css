@@ -1,0 +1,57 @@
+.trusted-section{
+  width: 100%;
+  padding: 6rem 0;
+  padding-bottom: 15rem;
+  background-color: var(--bg-color);
+
+  & h3{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 4rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+.Companies{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  
+
+  & img{
+    width: 100%;
+    max-width: 15rem;
+    clip-path: circle(50%);
+    
+    filter: sepia(100%);
+    /* filter: sepia(90%) brightness(80%) contrast(120%);  */
+  }
+
+}
+
+@media (max-width:900px){
+  .Companies img{
+   max-width: 10rem;
+  }
+  
+}
+@media (max-width:650px){
+  .Companies img{
+   max-width: 7rem;
+  }
+  
+}
+
+@media (max-width:500px){
+  .Companies img{
+   max-width: 5rem;
+  }
+  .Companies{
+    gap: 1.4rem;
+  }
+  
+}

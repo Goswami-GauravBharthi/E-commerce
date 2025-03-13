@@ -1,0 +1,157 @@
+.filter-data {
+  width: 100%;
+
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: start;
+  /* justify-content: space-evenly; */
+  font-size: 1.6rem;
+
+}
+
+.filter-data h2 {
+  color: var(--text-color-dark);
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+}
+
+.filter-data ul li {
+  display: block;
+  margin-top: 0.1rem;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  color: var(--main-heading-color);
+}
+
+.filter-data ul li.active {
+  color: var(--text-color-dark);
+  border-bottom: 2px solid var(--text-color-dark);
+}
+
+
+.filter-data select {
+  outline: 0;
+  border: 0;
+  /* background-color: red; */
+  border: 1px solid white;
+
+  width: 10rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+
+  & option {
+    color: var(--main-heading-color);
+    font-weight: 500;
+    background: var(--dark-bg-color);
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+}
+
+.clear-filter-btn {
+  outline: 0;
+  border: 0;
+  padding: 0.5rem 1rem;
+  background-color: #ef9d3894;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: #f68b09;
+    scale: 1.1;
+    border-radius: 0.5rem;
+  }
+}
+
+
+/* //input */
+.form__group {
+  position: relative;
+  padding: 10px 0 0;
+  width: 100%;
+  max-width: 12rem;
+}
+
+.form__field {
+
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #fff;
+  padding: 10px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 400;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #b59e7df2, #ef9d38);
+  border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #ef8438;
+  font-weight: 500;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+
+
+@media (max-width:900px) {
+  .filter-data{
+    gap: 1rem;
+    position: fixed;
+    top: 6.85rem;
+    left: 0;
+    bottom: 0;
+    background: var(--dark-bg-color);
+    opacity: 96%;
+    z-index: 1;
+    width: 20rem;
+    padding: 1rem 2rem;
+    transition: 0.4s;
+  
+
+  }
+  .hideFilter{
+    /* display: none; */
+    left: -22rem;
+    /* top:8rem */
+
+  }
+}

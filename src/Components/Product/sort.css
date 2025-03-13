@@ -1,0 +1,48 @@
+.sort-section{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* background-color: red; */
+  padding: 1rem 0;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+
+.sort-icon {
+  font-size: 3.5rem;
+  display: flex;
+
+  & svg{
+    background-color: var(--dark-bg-color);
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+  }
+
+}
+
+
+.sort-section select{
+  outline: 0;
+  border: 0;
+  /* background-color: red; */
+  border: 1px solid white;
+
+  width: 12rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+
+  & option{
+    color: var(--main-heading-color);
+    font-weight: 500;
+    background: var(--dark-bg-color);
+    cursor: pointer;
+  }
+}
+
+@media (max-width:600px) {
+  .sort-icon{
+    display: none;
+  }
+}

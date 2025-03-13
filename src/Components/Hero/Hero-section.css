@@ -1,0 +1,86 @@
+.hero-section {
+  width: 100%;
+  /* min-height: 80vh; */
+  padding: 6rem 6rem;
+  background-color: var(--bg-color);
+  position: relative;
+}
+.about{
+  background-color: var(--bg-color);
+}
+.welcome {
+  color: rgb(238, 111, 37);
+  letter-spacing: 0.7rem;
+  font-weight: 600;
+}
+
+
+p {
+  font-size: 1.6rem;
+  color: var(--main-heading-color);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+
+}
+
+.hero-section h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: 1.2rem;
+  color: var(--text-color-dark);
+  margin-bottom: 2rem;
+  border-bottom: 0.1rem solid white;
+}
+
+.hero-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./images/bg-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.hero-section .btn {
+  margin-top: 2rem;
+}
+
+@media (max-width:850px) {
+  section .hero  {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hero-img img {
+    order: 1;
+  }
+
+  .hero-data {
+    order: 2;
+    text-align: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero-section {
+    padding: 4rem 2rem;
+  }
+
+  .hero-section h1 {
+    font-size: 4rem;
+  }
+
+  .hero-section p {
+    font-size: 1.6rem;
+  }
+
+
+}

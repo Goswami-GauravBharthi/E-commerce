@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", serif;
+  color: #f9f8f8;
+
+
+}
+
+
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  /* 1rem = 10px */
+  overflow-x: hidden;
+  letter-spacing: 0.1rem;
+}
+
+
+:root {
+  --dark-bg-color: rgba(35, 35, 35);
+  --bg-color: rgba(45, 45, 45);
+  --bg-color-light: rgba(55, 55, 55);
+  --main-heading-color: #F4EAE0;
+  --text-color-dark: #F39E60;
+  --dark-paragraph-color: rgb(238, 111, 37);
+}
+
+.container {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0px auto;
+}
+
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+select {
+  & option {
+    color: var(--main-heading-color);
+    font-weight: 500;
+    background: var(--dark-bg-color);
+    cursor: pointer;
+  }
+}
+
+
+.grid {
+  display: grid;
+  gap: 9rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--main-heading-color);
+  transition: all 0.5s;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  outline: 4px solid var(--text-color-dark);
+}
+
+.btn:hover {
+  color: var(--dark-bg-color);
+  transform: scale(1.1);
+  outline: 2px solid var(--dark-bg-color);
+
+  box-shadow: 4px 5px 17px -4px var(--main-heading-color);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: var(--text-color-dark);
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.btn:hover::before {
+  width: 250%;
+}
+
+.simple-btn {
+  padding: 0.7rem 1.2rem;
+  background-color: var(--text-color-dark);
+  outline: 0;
+  border: 0;
+  /* width: 10rem; */
+  font-size: 1.8rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: 0.5s;
+
+
+  &:hover {
+    color: var(--text-color-dark);
+    background-color: var(--main-heading-color);
+  }
+}
+
+
+
+/* Loder css */
+/* From Uiverse.io by mobinkakei */
+#wifi-loader {
+  --background: #e4e4e4;
+  --front-color: #f09329;
+  --back-color: #ffffff;
+  --text-color: #ff8800;
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wifi-loader svg {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wifi-loader svg circle {
+  position: absolute;
+  fill: none;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: rotate(-100deg);
+  transform-origin: center;
+}
+
+#wifi-loader svg circle.back {
+  stroke: var(--back-color);
+}
+
+#wifi-loader svg circle.front {
+  stroke: var(--front-color);
+}
+
+#wifi-loader svg.circle-outer {
+  height: 86px;
+  width: 86px;
+}
+
+#wifi-loader svg.circle-outer circle {
+  stroke-dasharray: 62.75 188.25;
+}
+
+#wifi-loader svg.circle-outer circle.back {
+  animation: circle-outer135 1.8s ease infinite 0.3s;
+}
+
+#wifi-loader svg.circle-outer circle.front {
+  animation: circle-outer135 1.8s ease infinite 0.15s;
+}
+
+#wifi-loader svg.circle-middle {
+  height: 60px;
+  width: 60px;
+}
+
+#wifi-loader svg.circle-middle circle {
+  stroke-dasharray: 42.5 127.5;
+}
+
+#wifi-loader svg.circle-middle circle.back {
+  animation: circle-middle6123 1.8s ease infinite 0.25s;
+}
+
+#wifi-loader svg.circle-middle circle.front {
+  animation: circle-middle6123 1.8s ease infinite 0.1s;
+}
+
+#wifi-loader svg.circle-inner {
+  height: 34px;
+  width: 34px;
+}
+
+#wifi-loader svg.circle-inner circle {
+  stroke-dasharray: 22 66;
+}
+
+#wifi-loader svg.circle-inner circle.back {
+  animation: circle-inner162 1.8s ease infinite 0.2s;
+}
+
+#wifi-loader svg.circle-inner circle.front {
+  animation: circle-inner162 1.8s ease infinite 0.05s;
+}
+
+#wifi-loader .text {
+  position: absolute;
+  bottom: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: lowercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+#wifi-loader .text::before,
+#wifi-loader .text::after {
+  content: attr(data-text);
+}
+
+#wifi-loader .text::before {
+  color: var(--text-color);
+}
+
+#wifi-loader .text::after {
+  color: var(--front-color);
+  animation: text-animation76 3.6s ease infinite;
+  position: absolute;
+  left: 0;
+}
+
+@keyframes circle-outer135 {
+  0% {
+    stroke-dashoffset: 25;
+  }
+
+  25% {
+    stroke-dashoffset: 0;
+  }
+
+  65% {
+    stroke-dashoffset: 301;
+  }
+
+  80% {
+    stroke-dashoffset: 276;
+  }
+
+  100% {
+    stroke-dashoffset: 276;
+  }
+}
+
+@keyframes circle-middle6123 {
+  0% {
+    stroke-dashoffset: 17;
+  }
+
+  25% {
+    stroke-dashoffset: 0;
+  }
+
+  65% {
+    stroke-dashoffset: 204;
+  }
+
+  80% {
+    stroke-dashoffset: 187;
+  }
+
+  100% {
+    stroke-dashoffset: 187;
+  }
+}
+
+@keyframes circle-inner162 {
+  0% {
+    stroke-dashoffset: 9;
+  }
+
+  25% {
+    stroke-dashoffset: 0;
+  }
+
+  65% {
+    stroke-dashoffset: 106;
+  }
+
+  80% {
+    stroke-dashoffset: 97;
+  }
+
+  100% {
+    stroke-dashoffset: 97;
+  }
+}
+
+@keyframes text-animation76 {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  50% {
+    clip-path: inset(0);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+.loader {
+  background-color: var(--bg-color-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-popup{
+  display: none;
+
+}
